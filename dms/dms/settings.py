@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'login',
+    'data_app',
 )
 import django.contrib.auth
 django.contrib.auth.LOGIN_URL = '/'
