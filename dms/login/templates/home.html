@@ -1,9 +1,10 @@
 {% extends "base.html" %}
-{% block title %}Welcome to Django{% endblock %}
-{% block head %}Welcome to Django{% endblock %}
-{% block content %}
+{% block title %}Document management system |{% endblock %}
+{% block head1 %}Welcome to DMS{% endblock %}
+{% block homepage %}
+	{% load staticfiles %}
+	<link rel="stylesheet" type="text/css" href="{% static 'login/stylehome.css' %}" />
     <p>Welcome {{ user.username }}, </p>
-    <p>Select one of the following apps form the dashboard:</p>
-    <a href=/app1/"> Keyword Tracker app </a><br/>
+    <a href=/app1/"> upload document </a><br/>
     <a href="/logout/">Logout</a>
 {% endblock %}

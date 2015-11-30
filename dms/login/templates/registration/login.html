@@ -1,17 +1,25 @@
 {% extends "base.html" %}
 {% block title %}Login{% endblock %}
-{% block head %}Login{% endblock %}
+{% block head %}Signin{% endblock %}
 {% block content %}
     {% if form.errors %}
         <p>Your username and password didn't match. Please try again.</p>
     {% endif %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'login/style.css' %}" />
     <form method="post" action=".">{% csrf_token %}
-        <table border="0">
-            <tr><th><label for="id_username">Username:</label></th><td>{{ form.username }}</td></tr>
-            <tr><th><label for="id_password">Password:</label></th><td>{{ form.password }}</td></tr>
-        </table>
-        <input type="submit" value="Login" />
-        <input type="hidden" name="next" value="/home" />
+        <div class = "login">
+            <div>
+                <table border="5", width = 80%>
+                    <tr><th><label for="id_username">Username:</label></th><td>{{ form.username }}</td>
+                    <th><label for="id_password">Password:</label></th><td>{{ form.password }}</td></tr>
+                </table>
+            </div>
+            <div class = "lbutton" link = "white">
+                <input type="submit" value="Login"/>
+                <input type="hidden" name="next" value="/home"/>
+                <a href="/register">Not a member? sign up</a>
+            </div>
+        </div>
     </form>
-    <a href="/register">Register</a>
 {% endblock %}

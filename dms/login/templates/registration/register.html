@@ -1,10 +1,17 @@
 {% extends "base.html" %}
 {% block title %}User Registration{% endblock %}
-{% block head %}User Registration{% endblock %}
-{% block content %}
+{% block head2 %}User Signup{% endblock %}
+{% block content %}{% endblock %}
+{% block register %}
+{% load staticfiles %}
+<link rel="stylesheet" type="text/css" href="{% static 'login/style2.css' %}" />
     <form method="post" action=".">{% csrf_token %}
-        <table border="0">
-            {{ form.as_table }}
+        <table border="5">
+            <!-- <td height = "15">{{ form.as_table }}</td> -->
+            <tr height = "50"><th><label>Username:</label></th><td>{{ form.username }}</td></tr>
+            <tr height = "50"><th><label>email address:</label></th><td>{{ form.email }}</td></tr>
+            <tr height = "50"><th><label>Password:</label></th><td>{{ form.password1 }}</td></tr>
+            <tr height = "50"><th><label>Password (again):</label></th><td>{{ form.password2 }}</td></tr>
         </table>
         <input type="submit" value="Register" />
     </form>

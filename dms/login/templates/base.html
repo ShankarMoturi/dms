@@ -1,12 +1,23 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html>
     <head>
-        <title>Django Login Application |
+        <title>Document management system|
         {% block title %}{% endblock %}</title>
     </head>
     <body>
+        <div class = "homepage">
+            <h1>{% block head1 %}{% endblock %}</h1>
+            {% block homepage %}{% endblock %}
+        </div>
         <h1>{% block head %}{% endblock %}</h1>
         {% block content %}{% endblock %}
- 
+        <div class = "signup">
+            <h1>{% block head2 %}{% endblock %}</h1>
+            {% block register %}{% endblock %}
+        </div class = "success">
+            <h1>{% block head3 %}{% endblock %}</h1>
+            {% block registered %}{% endblock %}
+        <div>
+        </div>
     </body>
 </html>
