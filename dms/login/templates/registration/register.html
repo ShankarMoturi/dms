@@ -8,14 +8,12 @@
     <form method="post" action=".">{% csrf_token %}
         <table border="5">
             <!-- <td height = "15">{{ form.as_table }}</td> -->
-            <tr height = "50"><th><label>Firstname:</label></th><td>{{ form.firstname }}</td></tr>
-            <tr height = "50"><th><label>Lastname:</label></th><td>{{ form.lastname }}</td></tr>
+            <tr height = "50"><th><label>Firstname:</label></th><td>{{ form.first_name }}</td></tr>
+            <tr height = "50"><th><label>Lastname:</label></th><td>{{ form.last_name }}</td></tr>
             <tr height = "50"><th><label>Username:</label></th><td>{{ form.username }}</td></tr>
             <tr height = "50"><th><label>email address:</label></th><td>{{ form.email }}</td></tr>
             <tr height = "50"><th><label>Password:</label></th><td>{{ form.password1 }}</td></tr>
             <tr height = "50"><th><label>Password (again):</label></th><td>{{ form.password2 }}</td></tr>
-            <tr height = "50"><th><label>Mobile number:</label></th><td>{{ form.contact }}</td></tr>
-
         </table>
         <input type="submit" value="Register" />
     </form>

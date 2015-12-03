@@ -5,6 +5,7 @@
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static 'login/stylehome.css' %}" />
     <p>Welcome {{ user.username }}, </p>
-    <a href=/app1/"> upload document </a><br/>
+    <a href=/uploadfile/> upload document </a><br/>
+    <a href=/list/> view documents </a><br/>
     <a href="/logout/">Logout</a>
 {% endblock %}

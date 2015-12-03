@@ -1,0 +1,13 @@
+<html>
+<body>
+	<form action="../upload/" method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<table border="5">
+			<tr height = "50"><th><label>Filetype : </label></th><td><input type="text" id="typeOfFIle" name="typeOfFIle"/></td></tr>
+			<tr height = "50"><th>Filename : </label></th><td><input type="text" id="filename" name="filename"/></td></tr>
+		</table>
+		Choose File : <input type="file" id="docfile"name="docfile"/>
+		<input type="submit" value="Submit"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Minimal Django File Upload Example</title>
+    </head>
+
+    <body>
+        <!-- List of uploaded documents -->
+        {% if files %}
+            <ul>
+                {% for file in files %}
+                    <!-- <li>{{file.fileName}} -->
+                    <li><a href="{{ file.docfile.url }}">{{ file.fileName }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No documents.</p>
+        {% endif %}
+    </body>
+
+</html>

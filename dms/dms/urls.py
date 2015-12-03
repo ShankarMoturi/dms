@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from django.conf import settings
+from django.conf.urls.static import static
 from login.views import *
+
 
 urlpatterns = [
         #the ones related to the login app
@@ -25,6 +28,9 @@ urlpatterns = [
     url(r'^register/$', register),
     url(r'^register/success/$', register_success),
     url(r'^home/$', home),
-    
+    url(r'^myapp/list/$', home),
+    url(r'^uploadfile/', 'data_app.views.uploadfile'),
+    url(r'^upload/', 'data_app.views.fileupload'),
+    url(r'^list/', 'data_app.views.list'),
     url(r'^admin/', include(admin.site.urls)),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

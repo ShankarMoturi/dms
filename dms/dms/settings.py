@@ -57,7 +57,7 @@ ROOT_URLCONF = 'dms.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'dms', 'data_app', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'dms.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.mysql', 
-       'NAME': 'docmanagement',
+       'NAME': 'docs',
        'USER': 'root',
        'PASSWORD': 'admin',
        'HOST': '127.0.0.1',   # Or an IP Address that your DB is hosted on
@@ -101,6 +101,8 @@ USE_L10N = True
 
 USE_TZ = True
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
