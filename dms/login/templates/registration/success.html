@@ -1,11 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Registration Successful{% endblock %}
 {% block head3 %}
- Registration Completed Successfully
+ 
 {% endblock %}
 {% block registered %}
 	{% load staticfiles %}
 	<link rel="stylesheet" type="text/css" href="{% static 'login/stylesuccess.css' %}" />
-    Thank you for registering.
-    <a href="/">Login</a> 
+	<div class="pos">
+		<h1>Registration Completed Successfully</h1>
+		<p>Thank you for registering.</p>
+    	<a href="/login">Login</a>
+    </div>
 {% endblock %}

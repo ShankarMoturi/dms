@@ -19,16 +19,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 from login.views import *
 
-
 urlpatterns = [
         #the ones related to the login app
     url(r'^$', 'django.contrib.auth.views.login'),
+    url(r'^login/$', 'django.contrib.auth.views.login'),
     url(r'^logout/$', logout_page),
     url(r'^accounts/login/$', 'django.contrib.auth.views.login'), # If user is not login it will redirect to login page
     url(r'^register/$', register),
     url(r'^register/success/$', register_success),
     url(r'^home/$', home),
-    url(r'^myapp/list/$', home),
     url(r'^uploadfile/', 'data_app.views.uploadfile'),
     url(r'^upload/', 'data_app.views.fileupload'),
     url(r'^list/', 'data_app.views.list'),

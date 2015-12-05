@@ -1,0 +1,27 @@
+body {
+    background: url("lib.jpg") no-repeat center;
+    background-size:100% 100%;
+}
+.upload {
+	margin-top: 15%;
+	margin-left: 35%;
+	color:white;
+}
+.s1 {
+	margin-top: 2%;
+	margin-left: 9%;
+}
+input[type=submit] {
+    width: 10em;  height: 3em;
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.g1 {
+	color:black;
+}
+.ta {
+	color:black;
+}
+.k1 {
+	color: white;
+}

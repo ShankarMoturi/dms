@@ -1,12 +1,13 @@
 {% extends "base.html" %}
 {% block title %}User Registration{% endblock %}
-{% block head2 %}User Signup{% endblock %}
 {% block content %}{% endblock %}
 {% block register %}
 {% load staticfiles %}
 <link rel="stylesheet" type="text/css" href="{% static 'login/style2.css' %}" />
+<div class="tb">
+    <h1>User Signup</h1>
     <form method="post" action=".">{% csrf_token %}
-        <table border="5">
+        <table class="t" border="5">
             <!-- <td height = "15">{{ form.as_table }}</td> -->
             <tr height = "50"><th><label>Firstname:</label></th><td>{{ form.first_name }}</td></tr>
             <tr height = "50"><th><label>Lastname:</label></th><td>{{ form.last_name }}</td></tr>
@@ -18,4 +19,5 @@
         <input type="submit" value="Register" />
     </form>
     <a href="/">Login</a>
+</div>
 {% endblock %}

@@ -2,21 +2,35 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Minimal Django File Upload Example</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Document Management System </title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 
     <body>
+        {% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'data_app/css/bootstrap.min.css' %}" type="text/css"/>
+        <link href="{% static 'data_app/css/custom1.css' %}" rel="stylesheet" type="text/css"/>
         <!-- List of uploaded documents -->
         {% if files %}
             <ul>
+                <h1>Your files!!</h1>
                 {% for file in files %}
                     <!-- <li>{{file.fileName}} -->
-                    <li><a href="{{ file.docfile.url }}">{{ file.fileName }}</a></li>
+                    <a href = "{{ file.docfile.url }}" class = "btn btn-default btn-lg" role = "button">{{ file.fileName }}</a><br>
                 {% endfor %}
+                <div>
+                    <h2><a href="/home">Dashboard</a></h2>
+                </div>
             </ul>
         {% else %}
-            <p>No documents.</p>
-        {% endif %}
-    </body>
+            <h1>No documents.</h1>
+            <h2><a href="/home">Dashboard</a></h2>
 
+        {% endif %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
 </html>

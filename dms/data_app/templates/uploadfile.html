@@ -1,13 +1,27 @@
 <html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document Management System </title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
 <body>
-	<form action="../upload/" method="post" enctype="multipart/form-data">
-		{% csrf_token %}
-		<table border="5">
-			<tr height = "50"><th><label>Filetype : </label></th><td><input type="text" id="typeOfFIle" name="typeOfFIle"/></td></tr>
-			<tr height = "50"><th>Filename : </label></th><td><input type="text" id="filename" name="filename"/></td></tr>
-		</table>
-		Choose File : <input type="file" id="docfile"name="docfile"/>
-		<input type="submit" value="Submit"/>
-	</form>
+	{% load staticfiles %}
+        <link rel="stylesheet" href="{% static 'data_app/css/bootstrap.min.css' %}" type="text/css"/>
+        <link href="{% static 'data_app/css/custom3.css' %}" rel="stylesheet" type="text/css"/>
+    <div class="upload">
+    	<h1>Upload Your Documents</h1>
+		<form action="../upload/" method="post" enctype="multipart/form-data">
+			{% csrf_token %}
+			<table border="5">
+				<tr height = "50"><th><label class="k1">Filetype : </label></th><td><input class="ta" type="text" id="typeOfFIle" name="typeOfFIle"/></td></tr>
+				<tr height = "50"><th><label class="k1">Filename : </label></th><td><input class="ta" type="text" id="filename" name="filename"/></td></tr>
+				<tr height = "50"><th><label class="k1">Choose File : </label></th><td><input class="ta" type="file" id="docfile"name="docfile"/></td></tr>
+			</table>
+			<input class="g1" type="submit" value="Submit"/>
+		</form>
+		<h1 class="s1"><a href="/home">Dashboard</a></h1>
+	</div>
 </body>
 </html>

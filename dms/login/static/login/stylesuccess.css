@@ -1,14 +1,18 @@
 
 a {
-	color: white;
+	color: blue;
 }
 body {
 	background-color: #48D1CC;
     background: url("register4.jpg") no-repeat center;
-    background-size:100% 1500%;
+    /*background-size:100% 100%;*/
 	color: white;
 	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	line-height: 1.5em;
 	height: 100%;
+}
+.pos{
+	margin-left: 35%;
+	margin-top: 20%;
 }
